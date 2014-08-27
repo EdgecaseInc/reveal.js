@@ -1,0 +1,229 @@
+//
+// Edgecase theme for reveal.js.
+// Copyright (C) 2014 Edgecase
+// 
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@font-face {
+    font-family: 'sanchez-light';
+    src: url('../../lib/font/sanchez/sanchez-light.eot');
+    src: url('../../lib/font/sanchez/sanchez-light.eot?#iefix') format('embedded-opentype'),
+        url('../../lib/font/sanchez/sanchez-light.woff') format('woff'),
+        url('../../lib/font/sanchez/sanchez-light.ttf') format('truetype'),
+        url('../../lib/font/sanchez/sanchez-light.svg#sanchez-light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sanchez-bold';
+    src: url('../../lib/font/sanchez/sanchez-bold.eot');
+    src: url('../../lib/font/sanchez/sanchez-bold.eot?#iefix') format('embedded-opentype'),
+        url('../../lib/font/sanchez/sanchez-bold.woff') format('woff'),
+        url('../../lib/font/sanchez/sanchez-bold.ttf') format('truetype'),
+        url('../../lib/font/sanchez/sanchez-bold.svg#sanchez-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sanchez-italic';
+    src: url('../../lib/font/sanchez/sanchez-italic.eot');
+    src: url('../../lib/font/sanchez/sanchez-italic.eot?#iefix') format('embedded-opentype'),
+        url('../../lib/font/sanchez/sanchez-italic.woff') format('woff'),
+        url('../../lib/font/sanchez/sanchez-italic.ttf') format('truetype'),
+        url('../../lib/font/sanchez/sanchez-italic.svg#sanchez-italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sanchez';
+    src: url('../../lib/font/sanchez/sanchez.eot');
+    src: url('../../lib/font/sanchez/sanchez.eot?#iefix') format('embedded-opentype'),
+        url('../../lib/font/sanchez/sanchez.woff') format('woff'),
+        url('../../lib/font/sanchez/sanchez.ttf') format('truetype'),
+        url('../../lib/font/sanchez/sanchez.svg#sanchez') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Edgecase color variables
+$edgecase-color-blue: rgba(0, 147, 201, 1);
+$edgecase-color-lightblue: rgba(97, 180, 228, 1);
+$edgecase-color-yellow: rgba(255, 221, 0, 1);
+$edgecase-color-pink: rgba(206, 50, 98, 1);
+$edgecase-color-orange: rgba(255, 91, 53, 1);
+$edgecase-color-darkgray: rgba(51, 62, 72, 1);
+
+// Override theme settings (see ../template/settings.scss)
+// Background of the presentation
+$backgroundColor: $edgecase-color-blue;
+$backgroundImage: url(../../lib/img/edgecase-background.png) repeat top center;
+
+// Links and actions
+$linkColor: $edgecase-color-pink;
+$linkColorHover: lighten($linkColor, 20%);
+
+// Primary/body text
+$mainFont: sanchez, sans;
+$mainFontSize: 30px;
+$mainColor: #fff;
+
+// Headings
+$headingMargin: 0 0 .5em 0;
+$headingFont: 'sanchez-bold', sans;
+// $headingColor: #eee;
+// $headingLineHeight: 0.9em;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingTextShadow: none;
+// $heading1TextShadow: $headingTextShadow;
+
+// Text selection
+$selectionBackgroundColor: $edgecase-color-yellow;
+$selectionColor: #000;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+    background: $backgroundImage, $backgroundColor;
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+// CSS overrides (terrible, I know) ------------
+.reveal {
+    letter-spacing: normal;
+
+    pre {
+        margin: 15px auto 40px;
+        width: 100%;
+
+        code {
+            border-top: 9px solid #d7d7d7;
+
+            &:after {
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 0;
+                height: 0;
+                border-style: solid solid solid inset;
+                border-width: 0 0 32px 55px;
+                border-color: transparent transparent #d7d7d7;
+            }
+
+            &.javascript {
+                border-color: #8134d0;
+                &:after {
+                    border-color: transparent transparent #8134d0;
+                }
+            }
+
+            &.xml {
+                border-color: #34d051;
+                &:after {
+                    border-color: transparent transparent #34d051;
+                }
+            }
+        }
+    }
+
+    em,
+    i {
+        font-family: sanchez-italic;
+        font-style: normal;
+    }
+
+    strong,
+    b {
+        font-family: sanchez-bold;
+        font-weight: normal;
+    }
+
+    table {
+        width: 100%;
+
+        th,
+        td {
+            padding: 24px;
+            margin: 33px;
+            background: rgba(255,255,255,.3);
+            vertical-align: top;
+        }
+    }
+
+    img {
+        &.stretch {
+            background: none;
+            border: 0 none;
+            box-shadow: none;
+        }
+    }
+
+    h2,
+    h3 {
+        color: $edgecase-color-yellow;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    section > code,
+    p > code,
+    li > code {
+        background: rgba(255,255,255,.2);
+        border: 1px solid rgba(255,255,255,.3);
+        @include border-radius(.25em);
+        font-size: 80%;
+        padding: 1px 2px;
+    }
+
+    .slide-number {
+        color: inherit;
+    }
+
+    // Completely custom copyright text
+    .copyright {
+        position: fixed;
+        display: block;
+        left: 15px;
+        bottom: 15px;
+        opacity: .5;
+        z-index: 31;
+        font-size: 12px;
+        color: inherit;
+    }
+}
+
+.print-pdf {
+
+    img {
+        &.stretch {
+            max-width: 75%;
+            max-height: 75%;
+        }
+    }
+
+    .copyright,
+    .slide-number {
+        display: none;
+    }
+}
+
+
+// ---------------------------------------------
