@@ -1,3 +1,4 @@
+@import url(../../lib/font/inconsolata/stylesheet.css);
 @font-face {
   font-family: 'sanchez-light';
   src: url('../../lib/font/sanchez/sanchez-light.eot');
@@ -281,6 +282,8 @@ body {
 
 .reveal {
   letter-spacing: normal; }
+  .reveal code {
+    font-family: "inconsolatamedium", monospace; }
   .reveal pre {
     margin: 15px auto 40px;
     width: 100%; }

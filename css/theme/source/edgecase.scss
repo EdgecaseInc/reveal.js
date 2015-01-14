@@ -11,6 +11,8 @@
 
 
 // Include theme-specific fonts
+@import url(../../lib/font/inconsolata/stylesheet.css);
+
 @font-face {
     font-family: 'sanchez-light';
     src: url('../../lib/font/sanchez/sanchez-light.eot');
@@ -106,6 +108,10 @@ $selectionColor: #000;
 // CSS overrides (terrible, I know) ------------
 .reveal {
     letter-spacing: normal;
+
+    code {
+        font-family: "inconsolatamedium", monospace;
+    }
 
     pre {
         margin: 15px auto 40px;
