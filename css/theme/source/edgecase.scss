@@ -11,51 +11,9 @@
 
 
 // Include theme-specific fonts
-@import url(../../lib/font/inconsolata/stylesheet.css);
+@import url(../../lib/font/sanchez/sanchez.css);
+@import url(../../lib/font/inconsolata/inconsolata.css);
 
-@font-face {
-    font-family: 'sanchez-light';
-    src: url('../../lib/font/sanchez/sanchez-light.eot');
-    src: url('../../lib/font/sanchez/sanchez-light.eot?#iefix') format('embedded-opentype'),
-        url('../../lib/font/sanchez/sanchez-light.woff') format('woff'),
-        url('../../lib/font/sanchez/sanchez-light.ttf') format('truetype'),
-        url('../../lib/font/sanchez/sanchez-light.svg#sanchez-light') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'sanchez-bold';
-    src: url('../../lib/font/sanchez/sanchez-bold.eot');
-    src: url('../../lib/font/sanchez/sanchez-bold.eot?#iefix') format('embedded-opentype'),
-        url('../../lib/font/sanchez/sanchez-bold.woff') format('woff'),
-        url('../../lib/font/sanchez/sanchez-bold.ttf') format('truetype'),
-        url('../../lib/font/sanchez/sanchez-bold.svg#sanchez-bold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'sanchez-italic';
-    src: url('../../lib/font/sanchez/sanchez-italic.eot');
-    src: url('../../lib/font/sanchez/sanchez-italic.eot?#iefix') format('embedded-opentype'),
-        url('../../lib/font/sanchez/sanchez-italic.woff') format('woff'),
-        url('../../lib/font/sanchez/sanchez-italic.ttf') format('truetype'),
-        url('../../lib/font/sanchez/sanchez-italic.svg#sanchez-italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'sanchez';
-    src: url('../../lib/font/sanchez/sanchez.eot');
-    src: url('../../lib/font/sanchez/sanchez.eot?#iefix') format('embedded-opentype'),
-        url('../../lib/font/sanchez/sanchez.woff') format('woff'),
-        url('../../lib/font/sanchez/sanchez.ttf') format('truetype'),
-        url('../../lib/font/sanchez/sanchez.svg#sanchez') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 // Edgecase color variables
 $edgecase-color-blue: rgba(0, 147, 201, 1);

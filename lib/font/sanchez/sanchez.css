@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'sanchez-light';
+    src: url('sanchez-light.eot');
+    src: url('sanchez-light.eot?#iefix') format('embedded-opentype'),
+        url('sanchez-light.woff') format('woff'),
+        url('sanchez-light.ttf') format('truetype'),
+        url('sanchez-light.svg#sanchez-light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sanchez-bold';
+    src: url('sanchez-bold.eot');
+    src: url('sanchez-bold.eot?#iefix') format('embedded-opentype'),
+        url('sanchez-bold.woff') format('woff'),
+        url('sanchez-bold.ttf') format('truetype'),
+        url('sanchez-bold.svg#sanchez-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sanchez-italic';
+    src: url('sanchez-italic.eot');
+    src: url('sanchez-italic.eot?#iefix') format('embedded-opentype'),
+        url('sanchez-italic.woff') format('woff'),
+        url('sanchez-italic.ttf') format('truetype'),
+        url('sanchez-italic.svg#sanchez-italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sanchez';
+    src: url('sanchez.eot');
+    src: url('sanchez.eot?#iefix') format('embedded-opentype'),
+        url('sanchez.woff') format('woff'),
+        url('sanchez.ttf') format('truetype'),
+        url('sanchez.svg#sanchez') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
