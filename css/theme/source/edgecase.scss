@@ -112,7 +112,9 @@ $selectionColor: #000;
         width: 100%;
 
         code {
+            background: #f8f8f8;
             border-top: 9px solid #d7d7d7;
+            color: #333;
 
             &:after {
                 content: " ";
